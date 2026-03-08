@@ -45,6 +45,7 @@ var (
 	ErrorUserAWSS3Disabled                  = NewError(incr(400), lang{zh: "多用户开放网关存储类型 AWS S3 未开启", en: "Multi-user open gateway storage type AWS S3 is not enabled"})
 	ErrorUserMinIODisabled                  = NewError(incr(400), lang{zh: "多用户开放网关存储类型 MinIO 未开启", en: "Multi-user open gateway storage type MinIO is not enabled"})
 	ErrorUserLocalFSDisabled                = NewError(incr(400), lang{zh: "多用户开放网关存储类型 服务器本地存储 未开启", en: "Multi-user open gateway storage type server local storage is not enabled"})
+	ErrorUserDogeDisabled                   = NewError(incr(400), lang{zh: "多用户开放网关存储类型 多吉云 未开启", en: "Multi-user open gateway storage type Doge Cloud is not enabled"})
 	ErrorWebDAVInvalidEndpoint              = NewError(incr(400), lang{zh: "WebDAV服务器URL无效", en: "WebDAV server URL is invalid"})
 	ErrorWebDAVInvalidUser                  = NewError(incr(400), lang{zh: "WebDAV服务器用户名不能为空", en: "WebDAV server username is invalid"})
 	ErrorWebDAVInvalidPassword              = NewError(incr(400), lang{zh: "WebDAV服务器密码不能为空", en: "WebDAV server URL is invalid"})

@@ -7,6 +7,7 @@ import (
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/aliyun_oss"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/aws_s3"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/cloudflare_r2"
+	"github.com/haierkeys/custom-image-gateway/pkg/storage/doge"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/local_fs"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/minio"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/webdav"
@@ -34,6 +35,7 @@ type config struct {
 	MinIO       minio.Config         `yaml:"minio"`
 	AWSS3       aws_s3.Config        `yaml:"aws-s3"`
 	WebDAV      webdav.Config        `yaml:"webdav"`
+	Doge        doge.Config          `yaml:"doge"`
 }
 
 type LogConfig struct {

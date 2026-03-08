@@ -75,6 +75,7 @@ Icon
 .Trashes
 
 # -- Project -----------------------------------------
+custom-image-gateway
 /build
 /storage/logs
 /storage/uploads
