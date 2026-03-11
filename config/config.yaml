@@ -238,3 +238,31 @@ webdav:
   # 上传文件的自定义路径或前缀
   # Custom path or prefix for uploaded files
   custom-path: demo_note
+
+# 多吉云存储配置
+# Doge Cloud storage configuration
+doge:
+  # 是否在 单服务网关 内启用多吉云存储
+  # Whether Doge Cloud storage is enabled in the single-service gateway
+  is-enable: false
+  # 是否在 多用户开放网关 内启用多吉云存储
+  # Whether Doge Cloud storage is enabled in the multi-user open gateway
+  is-user-enable: true
+  # 多吉云 S3 服务的 Endpoint URL（需要配置）例如 https://cos.ap-shanghai.myqcloud.com
+  # Endpoint URL for Doge Cloud S3 service (needs configuration) e.g. https://cos.ap-shanghai.myqcloud.com
+  endpoint:
+  # 多吉云区域（可以自定义）
+  # Doge Cloud region (can be customized)
+  region: automatic
+  # 多吉云存储桶名称（需要配置）
+  # Doge Cloud bucket name (needs configuration)
+  bucket-name:
+  # 多吉云访问密钥 ID（需要配置）
+  # Doge Cloud access key ID (needs configuration)
+  access-key-id:
+  # 多吉云访问密钥 Secret（需要配置）
+  # Doge Cloud access key secret (needs configuration)
+  access-key-secret:
+  # 上传文件的自定义路径或前缀
+  # Custom path or prefix for uploaded files
+  custom-path: blog

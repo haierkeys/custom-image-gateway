@@ -22,6 +22,7 @@ This project provides image upload, storage, and cloud synchronization services 
   - [x] Amazon S3 Support (Implemented and tested)
   - [x] MinIO Storage Support (v1.5+)
   - [x] WebDAV Storage Support (v2.5+)
+  - [x] DogeCloud Storage Support (v2.6+)
 - [x] Docker Support for easy deployment on home NAS or remote servers
 - [x] Public Service API & Web Interface <a href="#userapi">User Public Interface & Web Interface</a>
 
@@ -120,7 +121,7 @@ This software is open source and free. If you'd like to express your gratitude o
 
 - **Using Single Service Gateway**
 
-	Supports `Local Storage`, `OSS`, `Cloudflare R2`, `Amazon S3`, `MinIO`, `WebDAV`.
+	Supports `Local Storage`, `OSS`, `Cloudflare R2`, `Amazon S3`, `MinIO`, `WebDAV`, `DogeCloud`.
 
 	You need to modify [config.yaml](config/config.yaml#http-port).
 
@@ -134,7 +135,7 @@ This software is open source and free. If you'd like to express your gratitude o
 
 - **Using Multi-User Open Gateway**
 
-	Supports `Local Storage`, `OSS`, `Cloudflare R2`, `Amazon S3`, `MinIO` (v2.3+), `WebDAV` (v2.5+).
+	Supports `Local Storage`, `OSS`, `Cloudflare R2`, `Amazon S3`, `MinIO` (v2.3+), `WebDAV` (v2.5+), `DogeCloud` (v2.6+).
 
 	You need to modify [config.yaml](config/config.yaml#user).
 

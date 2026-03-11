@@ -8,6 +8,7 @@ import (
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/aliyun_oss"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/aws_s3"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/cloudflare_r2"
+	"github.com/haierkeys/custom-image-gateway/pkg/storage/doge"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/local_fs"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/minio"
 	"github.com/haierkeys/custom-image-gateway/pkg/storage/webdav"
@@ -22,6 +23,7 @@ const S3 CloudType = "s3"
 const LOCAL Type = "localfs"
 const MinIO CloudType = "minio"
 const WebDAV CloudType = "webdav"
+const DOGE CloudType = "doge"
 
 var StorageTypeMap = map[Type]bool{
 	OSS:    true,
@@ -30,6 +32,7 @@ var StorageTypeMap = map[Type]bool{
 	LOCAL:  true,
 	MinIO:  true,
 	WebDAV: true,
+	DOGE:   true,
 }
 
 var CloudStorageTypeMap = map[Type]bool{
@@ -37,6 +40,7 @@ var CloudStorageTypeMap = map[Type]bool{
 	R2:    true,
 	S3:    true,
 	MinIO: true,
+	DOGE:  true,
 }
 
 type Storager interface {
@@ -60,6 +64,8 @@ func NewClient(cType Type, config map[string]any) (Storager, error) {
 		return minio.NewClient(config)
 	} else if cType == WebDAV {
 		return webdav.NewClient(config)
+	} else if cType == DOGE {
+		return doge.NewClient(config)
 	}
 	return nil, code.ErrorInvalidStorageType
 }
@@ -81,6 +87,8 @@ func IsUserEnabled(cType Type) error {
 		return code.ErrorUserAWSS3Disabled
 	} else if cType == MinIO && !global.Config.MinIO.IsUserEnabled {
 		return code.ErrorUserMinIODisabled
+	} else if cType == DOGE && !global.Config.Doge.IsUserEnabled {
+		return code.ErrorUserDogeDisabled
 	}
 	return nil
 }
@@ -105,6 +113,9 @@ func GetIsUserEnabledStorageTypes() []CloudType {
 	}
 	if global.Config.WebDAV.IsUserEnabled {
 		list = append(list, WebDAV)
+	}
+	if global.Config.Doge.IsUserEnabled {
+		list = append(list, DOGE)
 	}
 	return list
 }

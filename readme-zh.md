@@ -22,6 +22,7 @@
   - [x] 支持 Amazon S3（功能已实现，已测试）
   - [x] 增加 MinIO 存储支持（v1.5+）
   - [x] 支持 WebDAV 存储（v2.5+）
+  - [x] 支持多吉云存储（v2.6+）
 - [x] 提供 Docker 安装支持，便于在家庭 NAS 或远程服务器上使用
 - [x] 提供公共服务 API && Web界面，方便提供公共服务 <a href="#userapi">用户公共接口 & Web 界面</a>
 
@@ -122,7 +123,7 @@
 
 - **使用单服务网关**
 
-	支持 `本地存储`, `OSS` , `Cloudflare R2` , `Amazon S3` , `MinIO`, `WebDAV`
+	支持 `本地存储`, `OSS` , `Cloudflare R2` , `Amazon S3` , `MinIO`, `WebDAV`, `多吉云`
 
 	需要修改 [config.yaml](config/config.yaml#http-port)
 
@@ -137,7 +138,7 @@
 
 - **使用 多用户 开放网关**
 
-	支持  `本地存储`, `OSS` , `Cloudflare R2` , `Amazon S3` , `MinIO`  ( v2.3+ ), `WebDAV` ( v2.5+ )
+	支持  `本地存储`, `OSS` , `Cloudflare R2` , `Amazon S3` , `MinIO`  ( v2.3+ ), `WebDAV` ( v2.5+ ), `多吉云` ( v2.6+ )
 
 	需要在 [config.yaml](config/config.yaml#user) 中修改
 
